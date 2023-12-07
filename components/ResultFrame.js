@@ -1,9 +1,8 @@
 import React from 'react';
 
-const ResultsFrame = ({ result }) => {
+const ResultsFrame = ({ result}) => {
   // Dummy data for matched books
     const matchedBooks = result;
-    console.log(result)
 
   const booksToDisplay = matchedBooks.length > 0 ? matchedBooks : null;
 

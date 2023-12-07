@@ -1,27 +1,35 @@
-import React, { useState } from 'react';
+import { useState, CSSProperties } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import axios from 'axios';
 
-const InputForm = ({ result, isResultAvailable, setIsResultAvailable,setResult }) => {
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red"
+}
+
+const InputForm = ({ result, isResultAvailable, setIsResultAvailable,setResult}) => {
   const [genrePreference, setGenrePreference] = useState('');
   const [complexityPreference, setComplexityPreference] = useState(5);
-
+  const [loading, setLoading] = useState(false);
+  const [color, setColor] = useState("#ffffff");
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const formData = {
         genrePreference,
         complexityPreference,
       };
       const response = await axios.post('https://booking-matching-app.onrender.com/api/students', formData);
-
       console.log(response.data.matchedBooks);
       setResult(response.data.matchedBooks)
-      
       setIsResultAvailable(true);
     } catch (error) {
       console.error('Error submitting form:', error);
     }
     setIsResultAvailable(true);
+    setLoading(false);
   };
 
   return (
@@ -43,6 +51,14 @@ const InputForm = ({ result, isResultAvailable, setIsResultAvailable,setResult }
           Enter one of: Fantasy, Mystery, Science Fiction, Romance, Thriller, Historical Fiction
         </div>
       </div>
+      {loading?<ClipLoader
+        color={color}
+        loading={loading}
+        cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />: null}
       <div className="mb-6">
         <label htmlFor="complexityPreference" className="block text-gray-700 font-semibold mb-2">
           On a scale of 1 to 10, how do you rate your complexity preference?

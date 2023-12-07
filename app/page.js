@@ -10,6 +10,7 @@ export default function Home() {
 
   const [isResultAvailable, setIsResultAvailable] = useState(false);
 
+
   return (
     <div className="container mx-auto">
       <NavBar />
@@ -20,7 +21,8 @@ export default function Home() {
           setResult={setResult}
           isResultAvailable ={isResultAvailable}
           setIsResultAvailable = {setIsResultAvailable} />
-        {isResultAvailable? <ResultsFrame  result = {result} /> : null}
+        {isResultAvailable? <ResultsFrame  result = {result}
+        /> : null}
       </main>
     </div>
   );

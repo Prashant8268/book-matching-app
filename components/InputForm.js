@@ -25,7 +25,7 @@ const InputForm = ({ result, isResultAvailable, setIsResultAvailable,setResult }
   };
 
   return (
-    <form className="container mx-auto max-w-md mt-24 p-4 bg-gray-100 rounded-lg shadow-lg" onSubmit={handleSubmit}>
+    <form className="container mx-auto max-w-md mt-24 p-4 bg-gray-100 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Book Matching Form</h2>
       <div className="mb-6">
         <label htmlFor="genrePreference" className="block text-gray-700 font-semibold mb-2">
@@ -59,7 +59,7 @@ const InputForm = ({ result, isResultAvailable, setIsResultAvailable,setResult }
         <p className="text-center mt-1 text-gray-600">Complexity: {complexityPreference}</p>
       </div>
       <div className="text-center">
-        <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition duration-300 ease-in-out">
+        <button onClick={handleSubmit} type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition duration-300 ease-in-out">
           Match Books
         </button>
       </div>

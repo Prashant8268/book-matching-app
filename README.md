@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prashant - Reach Best Full Stack Engineer Application 2023
 
-## Getting Started
+## Book Matching App
 
-First, run the development server:
+### Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The Book Matching App is a web application built using Next.js and Node.js. It allows users to discover books based on their genre and complexity preferences. The app uses a basic database to match users' preferences with books scored on various criteria, providing a personalized book recommendation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **User-Friendly Interface:** A simple and intuitive UI designed with a fixed navigation bar and input form to capture user preferences.
+- **Book Matching:** Calculates the difference of vectors between user preferences and book criteria, finding matches based on genre and complexity scores.
+- **Database Integration:** Utilizes MongoDB for storing book data and retrieving recommendations.
+- **Visual Representation:** Displays matching book results with book covers, titles, descriptions, and other details.
+- **Styling and Animation:** Enhances the user experience with styled components, animations, and responsive design for various screen sizes.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Technologies Used
 
-## Learn More
+- **Frontend:** Next.js, React.js, Axios for API requests
+- **Backend:** Node.js, Express.js for RESTful API endpoints, MongoDB for database storage
 
-To learn more about Next.js, take a look at the following resources:
+### Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the development server using `npm run dev`.
+4. Access the application via `http://localhost:3000`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Usage
 
-## Deploy on Vercel
+1. Enter your preferred genre and complexity rating.
+2. Click "Match Books" to get personalized book recommendations.
+3. Explore the matching results with book details and cover images.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Implement user authentication for personalized recommendations.
+- Enhance the UI with additional features like sorting, filtering, and more book details.
+
+### Contributors
+
+- Prashant
+
+
